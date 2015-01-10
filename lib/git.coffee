@@ -167,7 +167,7 @@ module.exports =
       return parseDefault(data)
 
   push: ->
-    cmd = "-c push.default=simple push --porcelain"
+    cmd = "-c push.default=current push --porcelain"
     unless repo.getUpstreamBranch()
       cmd = "#{cmd} --set-upstream origin #{repo.getShortHead()}"
 
